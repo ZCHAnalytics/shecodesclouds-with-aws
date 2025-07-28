@@ -1,1 +1,52 @@
 steps.md
+
+# ========================
+# Terraform
+# ========================
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+crash.log
+*.log
+terraform.tfvars.json
+override.tf
+override.tf.json
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+*.venv/
+venv/
+resume_venv/
+pip-log.txt
+*.pyo
+*.pyd
+
+# ========================
+# VS Code
+# ========================
+.vscode/
+.history/
+
+# ========================
+# OS / Editor Artifacts
+# ========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ========================
+# GitHub Actions Artifacts
+# ========================
+*.out
+*.summary
