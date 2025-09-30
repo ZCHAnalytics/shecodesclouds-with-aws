@@ -8,6 +8,12 @@ variable "aws_region" {
   type        = string
 }
 
+variable "environment" {
+  type = string
+  description = "Deployment env"
+  default = "dev"
+}
+
 variable "lambda_function_name" {
   description = "Name of the AWS Lambda function"
   type        = string

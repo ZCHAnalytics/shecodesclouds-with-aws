@@ -6,7 +6,7 @@
 # -------------------------------------------------------------------
 
 aws_region               = "eu-west-2"                       # AWS region (London)
-
+environment             = "dev"
 lambda_function_name     = "zch-resume-function"             # Must be globally unique within AWS Lambda
 lambda_zip_path          = "./function.zip"                  # Path to zipped Lambda code
 
