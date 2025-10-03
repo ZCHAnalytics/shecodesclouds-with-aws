@@ -18,30 +18,38 @@ async function updateVisitorCount() {
     }
 
     try {
-            const visitorId = getVisitorId();
+        const visitorId = getVisitorId();
+        console.log('Sending visitor ID:'); 
 
-            // To be replaced with  deployed API Gateway endpoint
-            const API_URL = 'https://zch-resume-function.execute-api.eu-west-2.amazonaws.com/dev/visitor-count';
+        // deployed API Gateway endpoint
+        const API_URL = 'https://o47jxf88ie.execute-api.eu-west-2.amazonaws.com/visitor-count';
 
-            const response = await fetch(`${API_URL}?visitorId=${encodeURIComponent(visitorId)}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
+        // POST request with JSON body
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ visitorId })
+        });
+        console.log('Response status:', response.status);
 
-            if (response.ok) {
-                const data = await response.json();
-                console.log('Visitor count received:', data);
-                countElement.textContent = data.count;
-            } else {
-                throw new Error(`HTTP ${response.status}`);
-            }
-        } catch (error) {
-            console.error('Error updating visitor count:', error);
-            countElement.textContent = 'Error';
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Visitor count received:', data);
+            countElement.textContent = data.count;
+        } else {
+            
+            const errorText = await response.text();
+            console.error('Error response:', errorText);
+            
+            throw new Error(`HTTP ${response.status}`);
         }
+    } catch (error) {
+        console.error('Error updating visitor count:', error);
+        countElement.textContent = 'Error';
     }
+}
 
 // Call on page load
 if (document.readyState === 'loading') {

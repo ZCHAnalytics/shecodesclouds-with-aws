@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Zulfia's cloud resume showcasing skills in AWS, Azure, AI, and DevOps" />
-  <title>Zulfia's Cloud Resume with AWS - Cloud, AI & DevOps Enthusiast</title>
+  <title>Zulfia's Cloud Resume - Secure Cloud, AI & DevOps Enthusiast</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -12,8 +12,16 @@
   <a href="#resume-content" class="skip-link">Skip to main content</a>
 
   <header id="main-header" role="banner">
+    <div class="header-content">
+    <img src="embroidered-google-home.jpg" 
+         alt="Embroidered Google Home Mini with ladybug and flowers" 
+         class="profile-image"
+         width="100" 
+         height="100" />
+    <div class="header-text">
+      
     <h1>Zulfia</h1>
-    <p>Cloud, AI & DevOps Enthusiast</p>
+    <p>Secure Cloud, AI & DevOps Enthusiast</p>
   </header>
 
   <main id="resume-content" role="main">
@@ -22,89 +30,103 @@
     <section id="skills" class="resume-section" aria-labelledby="skills-heading">
       <h2 id="skills-heading">Skills & Certifications</h2>
       <ul>
-        <li><strong>Certifications:</strong> AZ-900 • AI-900</li>
-        <li><strong>Cloud & <abbr title="Infrastructure as Code">IaC</abbr>:</strong> Azure • Terraform • GitHub Actions • Azure DevOps</li>
-        <li><strong>Serverless:</strong> Azure Functions • Cosmos DB (Table API)</li>
-        <li><strong>Languages:</strong> Python • PowerShell • Bash • <abbr title="Structured Query Language">SQL</abbr></li>
+        <li><strong>Certifications:</strong> AZ-900 • AI-900 • <em>In Progress:</em> NCFE/Cisco Cyber Security</li>
+        <li><strong>Cloud Platforms:</strong> AWS (Lambda, API Gateway, DynamoDB, CloudFront, S3, IAM, CloudWatch) • Azure (Functions, Cosmos DB, Storage, DevOps)</li>
+        <li><strong><abbr title="Infrastructure as Code">IaC</abbr> & Automation:</strong> Terraform • GitHub Actions • Azure DevOps</li>
+        <li><strong>Languages:</strong> Python • JavaScript • PowerShell • Bash • <abbr title="Structured Query Language">SQL</abbr></li>
         <li><strong>Containers & Orchestration:</strong> Docker • Kubernetes</li>
-        <li><strong>Projects & Labs:</strong> Cloud Resume Challenge • Kubernetes Resume Challenge</li>
       </ul>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="resume-section" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
+      <h2 id="projects-heading">Cloud & DevOps Projects</h2>
 
-      <h3>Cloud Projects</h3>
-      <ul>
-        <li>
-          <strong>
-            <a href="https://github.com/ZCHAnalytics/cloud-resume-challenge" target="_blank" rel="noopener noreferrer">
-              Cloud Resume Challenge (Azure, Terraform, <abbr title="Continuous Integration/Continuous Deployment">CI/CD</abbr>)
-              <span class="sr-only">(opens in new tab)</span>
-            </a>
-          </strong>
-          <ul>
-            <li>Hosted static resume site on Azure with serverless visitor tracking via Azure Functions and Cosmos DB.</li>
-            <li>Infrastructure as Code using Terraform with remote state in Azure Storage, deployed via Azure DevOps Pipelines.</li>
-            <li>CI/CD implemented with Azure DevOps and GitHub Actions, including Cypress E2E tests.</li>
-            <li>Security features: <abbr title="Software Bill of Materials">SBOM</abbr> generation (Syft), vulnerability scanning (Grype, Bandit, Semgrep), and minimal <abbr title="Role-Based Access Control">RBAC</abbr>.</li>
-            <li>
-              <strong>GitHub Actions versions:</strong>
-              <a href="https://github.com/ZCHAnalytics/shecodesclouds-frontend" target="_blank" rel="noopener noreferrer">
-                Frontend<span class="sr-only">(opens in new tab)</span>
-              </a> |
-              <a href="https://github.com/ZCHAnalytics/shecodesclouds-backend" target="_blank" rel="noopener noreferrer">
-                Backend<span class="sr-only">(opens in new tab)</span>
-              </a>
-            </li>
-          </ul>
-        </li>
+      <!-- AWS Project -->
+      <article class="project">
+        <a
+        <h3>
+           href="https://github.com/ZCHAnalytics/aws-cloud-resume-challenge" target="_blank" rel="noopener noreferrer"> 
+           AWS Cloud Resume Challenge with DevOps and Security Mods
+            <span class="sr-only">(opens in new tab)</span> 
+          </a>
+        </h3>
+        
+        <ul>
+          <li><strong>Frontend:</strong> Static site hosted on S3, distributed globally via CloudFront with HTTPS.</li>
+          <li><strong>Backend:</strong> Serverless API using AWS Lambda (Python), API Gateway (HTTP API), and DynamoDB for visitor tracking with unique visitor detection.</li>
+          <li><strong>Security:</strong> Implemented IAM least privilege policies, removed overly permissive access to DynamoDB.</li>
+          <li><strong>Monitoring:</strong> CloudWatch alarms for Lambda errors, and traffic spikes (DoS detection) with SNS email notifications.</li>
+        </ul>
+      </article>
 
-        <li>
-          <strong>
-            <a href="https://github.com/ZCHAnalytics/azure-database-migration" target="_blank" rel="noopener noreferrer">
-              Azure Database Migration
-              <span class="sr-only">(opens in new tab)</span>
+      <!-- Azure Projects -->
+      <article class="project">
+        <h3>
+          <a href="https://github.com/ZCHAnalytics/cloud-resume-challenge" target="_blank" rel="noopener noreferrer">
+            Azure Cloud Resume Challenge (Terraform, <abbr title="Continuous Integration/Continuous Deployment">CI/CD</abbr>)
+            <span class="sr-only">(opens in new tab)</span>
+          </a>
+        </h3>
+        <ul>
+          <li><strong>Infrastructure:</strong> Provisioned Azure resources using Terraform with remote state management in Azure Storage.</li>
+          <li><strong>Backend:</strong> Serverless visitor counter using Azure Functions (Python) and Cosmos DB (Table API).</li>
+          <li><strong>CI/CD:</strong> Automated deployments via Azure DevOps Pipelines and GitHub Actions with E2E testing (Cypress).</li>
+          <li><strong>Security:</strong> <abbr title="Software Bill of Materials">SBOM</abbr> generation (Syft), vulnerability scanning (Grype, Bandit, Semgrep), minimal RBAC permissions.</li>
+          <li>
+            <strong>Dual Implementation:</strong>
+            <a href="https://github.com/ZCHAnalytics/shecodesclouds-frontend" target="_blank" rel="noopener noreferrer">
+              GitHub Actions Frontend<span class="sr-only">(opens in new tab)</span>
+            </a> |
+            <a href="https://github.com/ZCHAnalytics/shecodesclouds-backend" target="_blank" rel="noopener noreferrer">
+              Backend<span class="sr-only">(opens in new tab)</span>
             </a>
-          </strong>
-          <ul>
-            <li>Restored production <abbr title="Database">DB</abbr> into a dev-safe environment; implemented disaster recovery with Entra ID authentication.</li>
-          </ul>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </article>
 
-      <h3>Data Projects</h3>
-      <ul>
-        <li>
-          <strong>
-            <a href="https://github.com/ZCHAnalytics/aws-python-data-centralisation" target="_blank" rel="noopener noreferrer">
-              Retail Sales <abbr title="Extract, Transform, Load">ETL</abbr> & Data Analysis
-              <span class="sr-only">(opens in new tab)</span>
-            </a>
-          </strong>
-          <ul>
-            <li>Developed Python OOP scripts to extract and transform 120k+ rows from <abbr title="Amazon Web Services">AWS</abbr>, APIs, JSON, PDF, and CSV.</li>
-            <li>Built star-schema model and analytical SQL for actionable business insights.</li>
-          </ul>
-        </li>
-      </ul>
+      <article class="project">
+        <h3>
+          <a href="https://github.com/ZCHAnalytics/azure-database-migration" target="_blank" rel="noopener noreferrer">
+            Azure Database Migration & Disaster Recovery
+            <span class="sr-only">(opens in new tab)</span>
+          </a>
+        </h3>
+        <ul>
+          <li>Migrated production database to development environment with Entra ID authentication.</li>
+          <li>Implemented disaster recovery strategy with automated backups and geo-redundancy.</li>
+        </ul>
+      </article>
 
-      <h3>Platform Engineering & Kubernetes</h3>
-      <ul>
-        <li>
-          <strong>
-            <a href="https://github.com/ZCHAnalytics/kubernetes-resume-challenge" target="_blank" rel="noopener noreferrer">
-              Kubernetes Resume Challenge (Windows + PowerShell)
-              <span class="sr-only">(opens in new tab)</span>
-            </a>
-          </strong>
-          <ul>
-            <li>Adapted a Linux-based <abbr title="Kubernetes">K8s</abbr> challenge to Windows using PowerShell, Helm, and Terraform.</li>
-            <li>Created autoscaling cluster, CI/CD pipeline, persistent DB storage, and secure secrets handling.</li>
-          </ul>
-        </li>
-      </ul>
+      <!-- Data Projects -->
+      <h3>Data Engineering & Analytics</h3>
+      <article class="project">
+        <h4>
+          <a href="https://github.com/ZCHAnalytics/aws-python-data-centralisation" target="_blank" rel="noopener noreferrer">
+            Retail Sales <abbr title="Extract, Transform, Load">ETL</abbr> & Data Analysis
+            <span class="sr-only">(opens in new tab)</span>
+          </a>
+        </h4>
+        <ul>
+          <li>Built Python <abbr title="Object-Oriented Programming">OOP</abbr> ETL pipeline to extract and transform 120k+ rows from AWS RDS, S3, APIs, JSON, PDF, and CSV sources.</li>
+          <li>Designed star-schema data model and wrote analytical SQL queries for business intelligence.</li>
+        </ul>
+      </article>
+
+      <!-- Kubernetes Projects -->
+      <h3>Platform Engineering & Container Orchestration</h3>
+      <article class="project">
+        <h4>
+          <a href="https://github.com/ZCHAnalytics/kubernetes-resume-challenge" target="_blank" rel="noopener noreferrer">
+            Kubernetes Resume Challenge (Windows + PowerShell)
+            <span class="sr-only">(opens in new tab)</span>
+          </a>
+        </h4>
+        <ul>
+          <li>Adapted Linux-based Kubernetes challenge to Windows environment using PowerShell, Helm, and Terraform.</li>
+          <li>Deployed autoscaling cluster with persistent database storage, CI/CD pipeline, and secure secrets management.</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Education -->
@@ -116,19 +138,39 @@
       </ul>
     </section>
 
+    <!-- Hobbies -->
+    <section id="hobbies" class="resume-section" aria-labelledby="hobbies-heading">
+      <h2 id="hobbies-heading">Hobbies & Interests</h2>
+      <div class="hobbies-container">
+        <div class="hobby-item">
+          <p><strong>Quantum Embroidery:</strong> Patching holes in electronics and giving devices a second life</p>
+        </div>
+        <div class="hobby-item">
+          <p><strong>Debugging Sourdough:</strong> Experimenting with fermentation times and flour ratios </p>
+        </div>
+      </div>
+    </section>
     <!-- Visitor Counter -->
     <section id="visitor-count-section" aria-labelledby="visitor-heading" aria-live="polite" aria-atomic="true">
-      <h2 id="visitor-heading">Visitor Counter</h2>
-      <p>
-        Number of visitors:
+      <h2 id="visitor-heading">
+        Visitor Counter: 
         <span id="visitor-count" role="status">Loading...</span>
-      </p>
+      </h2>
     </section>
 
   </main>
 
   <footer id="main-footer" role="contentinfo">
-    <p>© 2025 Zulfia C.H. | Last updated July 2025</p>
+    <p>© 2025 Zulfia C.H. | Last updated October  2025</p>
+     <p>
+    <small>
+      Committed to accessibility: This site follows 
+      <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">
+        WCAG 2.1 Level AA
+        <span class="sr-only">(opens in new tab)</span>
+      </a> guidelines.
+    </small>
+  </p>
   </footer>
 
   <script src="visitor-counter.js"></script>
